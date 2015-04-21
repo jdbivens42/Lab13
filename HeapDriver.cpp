@@ -30,8 +30,8 @@ int main()
    int num_items = cds->size();
    cout << num_items << endl;
 
-//while(true)
-//{
+while(true)
+{
    HeapSkew<CD>* sh = new HeapSkew<CD>(&CD::compare_items);
 
    ListArrayIterator<CD>* iter = cds->iterator();
@@ -45,11 +45,11 @@ int main()
    while(!(sh->heapIsEmpty()))
    {
       CD* cd = sh->heapRemove();
-      cd->displayCD();
+     // cd->displayCD();
    }
 
    delete sh;
-//}
+}
    deleteCDs(cds);
    delete cds;
 
