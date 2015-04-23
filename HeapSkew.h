@@ -79,15 +79,15 @@ BinaryTree<T>* HeapSkew<T>::merge(BinaryTree<T>* left, BinaryTree<T>* right)
 	{
 		delete LR;
 		left->attachLeftSubtree(right);
-		//delete right;
+		delete right;
 		return left;
 	}
 	
 	BinaryTree<T>* blah=merge(LR, right);
 	left->attachLeftSubtree(blah);
 	
-	delete LR;
-	//delete blah;
+	//delete LR;
+	delete blah;
 	return left;
 
 }
